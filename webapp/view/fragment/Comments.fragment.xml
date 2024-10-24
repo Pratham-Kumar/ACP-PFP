@@ -1,0 +1,41 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" id="PRFragment">
+    <Dialog title="" contentWidth="800px">
+        <content>
+            <Table id="newTableId" inset="false" items="" fixedLayout="false" width="100%">
+                <headerToolbar>
+                    <OverflowToolbar id="_IDGenOverflowToolbarUpdated18882">
+                        <Title text="Comments History" />
+                        <ToolbarSpacer />
+                        <!-- <Button icon="sap-icon://excel-attachment" /> -->
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column id="newItemColumn1Updated12" width="6.5rem">
+                        <Text id="newItemIdColumnHeaderUpdated12" text="Logged Date" />
+                    </Column>
+                    <Column id="newItemColumn2Updated112">
+                        <Text id="newMaterialNumColumnHeaderUpdated112" text="Logged By" />
+                    </Column>
+                    <Column id="newItemColumn5Updated113">
+                        <Text id="newQuantityUnitColumnHeaderUpdated113" text="Comments" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="newIteemRowUpdated2">
+                        <cells>
+                            <Text text="31/01/2024" />
+                            <Text text="Mukatova karina" />
+                            <Text text="SLV signed on 01-Aug-2023. ITT issued on 31.01.2024." />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer />
+                <Button text="Cancel" press="onCommentClose" />
+            </Toolbar>
+        </footer>
+    </Dialog>
+</core:FragmentDefinition>

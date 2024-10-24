@@ -1,0 +1,301 @@
+<mvc:View
+    controllerName="com.sap.acp.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:uxap="sap.uxap"
+    xmlns:core="sap.ui.core"
+    xmlns:semantic="sap.f.semantic"
+    xmlns:u="sap.ui.unified"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:table="sap.ui.table"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <uxap:ObjectPageLayout
+                id="ObjectPageLayout"
+                upperCaseAnchorBar="false"
+                showAnchorBar="true"
+                enableLazyLoading="true"
+            >
+                <uxap:sections>
+                    <uxap:ObjectPageSection
+                        id="_IDGenObjectPageSection1"
+                        showTitle="false"
+                    >
+                        <uxap:subSections>
+                            <uxap:ObjectPageSubSection
+                                id="_IDGenObjectPageSubSection1"
+                                title="General Info"
+                            >
+                                <uxap:blocks>
+                                    <f:SimpleForm
+                                        id="_IDGenSimpleForm1"
+                                        editable="true"
+                                        layout="ResponsiveGridLayout"
+                                        labelSpanXL="4"
+                                        labelSpanL="8"
+                                        labelSpanM="4"
+                                        labelSpanS="12"
+                                        adjustLabelSpan="false"
+                                        emptySpanXL="0"
+                                        emptySpanL="0"
+                                        emptySpanM="0"
+                                        emptySpanS="0"
+                                        columnsXL="3"
+                                        columnsL="2"
+                                        columnsM="2"
+                                        singleContainerFullSize="false"
+                                    >
+                                        <!-- <Label text="Extension Name" />
+
+                                        <Text text="Annual contract Plan" /> -->
+                                        <Label text="Planning Year" />
+                                        <DatePicker displayFormat="yyyy" />
+                                    </f:SimpleForm>
+                                </uxap:blocks>
+                                <uxap:blocks />
+                            </uxap:ObjectPageSubSection>
+                            <uxap:ObjectPageSubSection
+                                id="_IDGenObjectPageSubSection6"
+                                title="List Items"
+                            >
+                                <uxap:blocks>
+                                    <ScrollContainer
+                                        horizontal="true"
+                                        vertical="true"
+                                        focusable="true"
+                                    >
+                                        <Table
+                                            id="itemsTableUpdated"
+                                            inset="false"
+                                            items="{tModel>/}"
+                                            mode="MultiSelect"
+                                            fixedLayout="false"
+                                            width="100%"
+                                        >
+
+                                        
+                                            <headerToolbar>
+                                                <OverflowToolbar
+                                                    id="_IDGenOverflowToolbarUpdated"
+                                                >
+                                                    <!-- <ToolbarSpacer /> -->
+
+                                                     <Button
+                                icon="sap-icon://sort"
+                                press="sortCategoriesAndName"
+                            />
+                            <SearchField
+                                search="onSearch"
+                                width="30%"
+                            />
+                                                </OverflowToolbar>
+                                            </headerToolbar>
+
+                                            
+                                            <columns>
+                                            <!-- <Column id="itemColumn1Updated7623" >
+                                                    <Text
+                                                        id="itemIdColumnHeaderUpdated3298"
+                                                        text="Contract Type"
+                                                        width="7rem"
+                                                    />
+                                                </Column>
+                                            <Column id="itemColumn1Updated76" >
+                                                    <Text
+                                                        id="itemIdColumnHeaderUpdated98"
+                                                        text="Department"
+                                                        width="7rem"
+                                                    />
+                                                </Column> -->
+                                                <Column id="itemColumn1Updated" >
+                                                    <Text
+                                                        id="itemIdColumnHeaderUpdated"
+                                                        text="ICP code Код ОКП"
+                                                        width="7rem"
+                                                    />
+                                                </Column>
+
+                                                <Column id="itemColumn2Updated" >
+                                                    <Text
+                                                        id="materialNumColumnHeaderUpdated"
+                                                        text="Requisition No Номер заявки"
+                                                        width="7rem"
+                                                    />
+                                                </Column>
+
+                                                <Column id="itemColumn3Updated" >
+                                                    <Text
+                                                        id="materialDescColumnHeaderUpdated"
+                                                        text="FPAL Code Код FPAL"
+                                                        width="6rem"
+                                                    />
+                                                </Column>
+
+                                                <Column id="itemColumn4Updated" >
+                                                    <Text
+                                                        id="quantityColumnHeaderUpdated"
+                                                        text="Activity Description Описание ТРУ (на анг)"
+                                                        width="11rem"
+                                                    />
+                                                </Column>
+
+                                                <Column id="itemColumn5Updated" >
+                                                    <Text
+                                                        id="quantityUnitColumnHeaderUpdated"
+                                                        text="Activity Description (RUS) Описание ТРУ (на рус)"
+                                                        width="12rem"
+                                                    />
+                                                </Column>
+                                                <Column id="234" >
+                                                    <Text
+                                                        id="213"
+                                                        text="Contract Value, $M Планируемая стоимость"
+                                                        width="9rem"
+                                                    />
+                                                </Column>
+                                                <Column id="76" >
+                                                    <Text
+                                                        id="875"
+                                                        text="Planned Duration Планируемый срок"
+                                                        width="8rem"
+                                                    />
+                                                </Column>
+                                                <Column id="13" >
+                                                    <Text
+                                                        id="86"
+                                                        text="Optional Extension Опционное продление"
+                                                        width="9rem"
+                                                    />
+                                                </Column>
+                                                <Column id="87" >
+                                                    <Text
+                                                        id="6r"
+                                                        text="Expected award date Планируемая дата присуждения"
+                                                        width="10rem"
+                                                    />
+                                                </Column>
+                                                <Column id="887" >
+                                                    <Text
+                                                        id="321"
+                                                        text="Latest Comments"
+                                                        width="9rem"
+                                                    />
+                                                </Column>
+                                                 <Column id="ft1" >
+                                                    <Text
+                                                        id="v1"
+                                                        text="Comments"
+                                                        width="7rem"
+                                                    />
+                                                </Column>
+                                                 <Column id="hv1">
+                                                    <Text
+                                                        id="kj1"
+                                                        text=""
+                                                    />
+                                                </Column>
+                                            </columns>
+
+                                            <items>
+                                                <ColumnListItem
+                                                    id="itemRowUpdated"
+                                                >
+                                                    <cells>
+                                                    <!-- <Text
+                                                            id="_IDGenInput4Updated43232"
+                                                            text="{tModel>contractType}"
+                                                        />
+                                                    <Text
+                                                            id="_IDGenInput4Updated432"
+                                                            text="{tModel>group}"
+                                                        /> -->
+
+                                                        <Text
+                                                            id="_IDGenInput4Updated"
+                                                            text="{tModel>icp}"
+                                                        />
+
+                                                        <Text
+                                                            id="_IDGenInput3Updated"
+                                                            text="{tModel>reqNo}"
+                                                        />
+
+                                                        <Text
+                                                            id="_IDGenInput2Updated"
+                                                            text="{tModel>FPAL}"
+                                                        />
+                                                        <Text
+                                                            id="_IDGenInput1Updated"
+                                                            text="{tModel>activityDes}"
+                                                        />
+
+                                                        <Text
+                                                            id="_IDGenInput0Updated"
+                                                            text="{tModel>activityDesRus}"
+                                                        />
+                                                         <Text
+                                                            id="_IDGenInput2432Updated"
+                                                            text="{tModel>contractValue}"
+                                                        />
+                                                        <Text
+                                                            id="_IDGenInput132Updated"
+                                                            text="{tModel>plannedDuration}"
+                                                        />
+
+                                                        <Text
+                                                            id="_IDGenInput0321Updated"
+                                                            text="{tModel>optionalExtension}"
+                                                        />
+                                                         <Text
+                                                            id="_IDGenInput2Update213d"
+                                                            text="{tModel>expectedAwdDate}"
+                                                        />
+                                                        <Text
+                                                            id="_IDGenInput1Updated43"
+                                                            text="{tModel>latestComment}"
+                                                        />
+
+                                                        <Input
+                                                            id="_IDGenInput0Updated432"
+                                                            value=""
+                                                        />
+                                                        <Button text="Comments Log" press="onCommentsLog"/>
+                                                    </cells>
+                                                </ColumnListItem>
+                                            </items>
+                                        </Table>
+                                    </ScrollContainer>
+                                </uxap:blocks>
+                            </uxap:ObjectPageSubSection>
+                        </uxap:subSections>
+                    </uxap:ObjectPageSection>
+                </uxap:sections>
+            </uxap:ObjectPageLayout>
+        </content>
+         <footer>
+            <Bar id="bar">
+                <contentRight>
+                    <Button
+                        text="Submit"
+                        tooltip="Create"
+                        press="onSave"
+                        id="Save"
+                        visible="true"
+                    />
+                    <Button
+                        text="Cancel"
+                        tooltip="Cancel"
+                        press="onCancel"
+                        id="Cancel"
+                        visible="true"
+                    />
+                </contentRight>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>
